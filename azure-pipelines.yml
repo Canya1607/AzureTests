@@ -20,12 +20,6 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'test'
-    projects: '**/*Test/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
-    testRunTitle: 'DotNetCoreCLI@2'
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
